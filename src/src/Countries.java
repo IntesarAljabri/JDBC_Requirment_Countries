@@ -1,19 +1,44 @@
 package src;
+
+import java.util.HashMap;
+
 public class Countries {
 
-	public static void main(String[] args) {
-		String cca2;
-		String ccn3;
-		String cca3;
-		String cioc;
-		String independent;
-		String status;
-		String unMember;
-		
-		
-		
-		
-
-	}
-
+	Name name = new Name();
+	String [] tld;
+	String cca2;
+	int ccn3;
+	String cca3;
+	String cioc;
+	boolean independent;
+	String status;
+	boolean unMember;
+	HashMap<String, Currencies> currencies;
+	Idd idd = new Idd();
+	String [] capital;
+	String [] altSpellings;
+	String region;
+	String subregion;
+	HashMap<String, String> languages;
+	HashMap<String, Translation> translations;
+	double [] latlng;
+	boolean landlocked;
+	String[] borders;
+	double area;
+	HashMap<String, Demonyms> demonyms;
+	String flag;
+	Maps maps = new Maps(); 
+	long population;
+	String fifa;
+	Car car = new Car();
+	String [] timezones;
+	String [] continents;
+	Flags flags = new Flags();
+	CoatOrArms coatOfArms = new CoatOrArms();
+	String startOfWeek;
+	CapitalInfo capitalInfo = new CapitalInfo();
+	PostalCode postalCode = new PostalCode();
+	
+	
+	
 }
