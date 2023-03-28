@@ -13,31 +13,7 @@ public class Countries {
 	boolean independent;
 	String status;
 	boolean unMember;
-	HashMap<String, Currencies> currencies;
-	Idd idd = new Idd();
-	String [] capital;
-	String [] altSpellings;
-	String region;
-	String subregion;
-	HashMap<String, String> languages;
-	HashMap<String, Translation> translations;
-	double [] latlng;
-	boolean landlocked;
-	String[] borders;
-	double area;
-	HashMap<String, Demonyms> demonyms;
-	String flag;
-	Maps maps = new Maps(); 
-	long population;
-	String fifa;
-	Car car = new Car();
-	String [] timezones;
-	String [] continents;
-	Flags flags = new Flags();
-	CoatOrArms coatOfArms = new CoatOrArms();
-	String startOfWeek;
-	CapitalInfo capitalInfo = new CapitalInfo();
-	PostalCode postalCode = new PostalCode();
+	
 	
 	
 	
