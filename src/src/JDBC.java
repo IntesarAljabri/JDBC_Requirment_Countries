@@ -116,16 +116,16 @@ public class JDBC {
 					+ "		   borders VARCHAR(MAX)," + " area VARCHAR(MAX)," + "		   flag VARCHAR(MAX),"
 					+ "	 maps VARCHAR(MAX)," + "		   population INT," + " fifa VARCHAR(MAX),"
 					+ "		   car_Signs VARCHAR(MAX)," + "	 car_Side VARCHAR(MAX),"
-					+ "		   timezones VARCHAR(MAX)," + "	 continents VARCHAR(MAX)" + "  );" + "END;\r\n"
+					+ "		   timezones VARCHAR(MAX)," + "	 continents VARCHAR(MAX)" + "  );" + "END;"
 					+ "INSERT INTO Countries (name_common, name_official, tld, cca2, ccn3, cca3, cioc, independent, status, un_member, idd_root, idd_suffixes, capital, alt_spellings, region, subregion, latlng, "
-					+ "landlocked, borders, area, flag, maps, population, fifa, car_Signs, car_Side, timezones, continents)\r\n"
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);\r\n";
+					+ "landlocked, borders, area, flag, maps, population, fifa, car_Signs, car_Side, timezones, continents)"
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 			table.add("Countries");
 
 			String insertLangSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Languages')" + "BEGIN"
 					+ "    CREATE TABLE Languages (" + "        country_Name VARCHAR(MAX),"
-					+ "        Language_Key VARCHAR(MAX)," + "        Language_Value VARCHAR(MAX)\r\n" + "    );"
+					+ "        Language_Key VARCHAR(MAX)," + "        Language_Value VARCHAR(MAX)" + "    );"
 					+ "END;" + "INSERT INTO Languages (country_Name, Language_Key, Language_Value)"
 					+ "VALUES (?, ?, ?);";
 
@@ -139,28 +139,28 @@ public class JDBC {
 
 			table.add("Currencies");
 
-			String insertTranSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Translations')\r\n"
-					+ "BEGIN\r\n" + "    CREATE TABLE Translations (\r\n" + "        country_Name VARCHAR(MAX),\r\n"
-					+ "        Translations_Key VARCHAR(MAX),\r\n" + "        Official VARCHAR(MAX),\r\n"
-					+ "        Common VARCHAR(MAX)\r\n" + "    );\r\n" + "END;"
-					+ "INSERT INTO Translations (country_Name, Translations_Key, Official, Common)\r\n"
-					+ "VALUES (?, ?, ?, ?);\r\n";
+			String insertTranSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Translations')"
+					+ "BEGIN" + "    CREATE TABLE Translations (" + "        country_Name VARCHAR(MAX),"
+					+ "        Translations_Key VARCHAR(MAX)," + "        Official VARCHAR(MAX),"
+					+ "        Common VARCHAR(MAX)" + "    );" + "END;"
+					+ "INSERT INTO Translations (country_Name, Translations_Key, Official, Common)"
+					+ "VALUES (?, ?, ?, ?);";
 
 			table.add("Translations");
 
-			String insertDemonymsSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Demonyms')\r\n"
-					+ "BEGIN\r\n" + "    CREATE TABLE Demonyms (\r\n" + "        country_Name VARCHAR(MAX),\r\n"
-					+ "        Demonyms_Key VARCHAR(MAX),\r\n" + "        f VARCHAR(MAX),\r\n"
-					+ "        m VARCHAR(MAX)\r\n" + "    );\r\n" + "END;"
-					+ "INSERT INTO Demonyms (country_Name, Demonyms_Key, f, m)\r\n" + "VALUES (?, ?, ?, ?);\r\n";
+			String insertDemonymsSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Demonyms')"
+					+ "BEGIN" + "    CREATE TABLE Demonyms (" + "        country_Name VARCHAR(MAX),"
+					+ "        Demonyms_Key VARCHAR(MAX)," + "        f VARCHAR(MAX),"
+					+ "        m VARCHAR(MAX)" + "    );" + "END;"
+					+ "INSERT INTO Demonyms (country_Name, Demonyms_Key, f, m)" + "VALUES (?, ?, ?, ?);";
 
 			table.add("Demonyms");
 
-			String insertFlafSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Flag')\r\n" + "BEGIN\r\n"
-					+ "    CREATE TABLE Flag (\r\n" + "        country_Name VARCHAR(MAX),\r\n"
-					+ "        png VARCHAR(MAX),\r\n" + "        svg VARCHAR(MAX),\r\n" + "        alt VARCHAR(MAX)\r\n"
-					+ "    );\r\n" + "END;" + "INSERT INTO Flag (country_Name, png, svg, alt)\r\n"
-					+ "VALUES (?, ?, ?, ?);\r\n";
+			String insertFlafSql = "IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Flag')" + "BEGIN"
+					+ "    CREATE TABLE Flag (" + "        country_Name VARCHAR(MAX),"
+					+ "        png VARCHAR(MAX)," + "        svg VARCHAR(MAX)," + "        alt VARCHAR(MAX)"
+					+ "    );" + "END;" + "INSERT INTO Flag (country_Name, png, svg, alt)"
+					+ "VALUES (?, ?, ?, ?);";
 
 			table.add("Flag");
 
